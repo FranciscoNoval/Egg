@@ -13,11 +13,21 @@
  */
 package Main;
 
+import Entities.Student;
+import Service.StudentService;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        StudentService ss = new StudentService();
+        ArrayList<Student> studentList = ss.addStudent();
+        System.out.println("");
+        ss.calculateFinalNote(studentList);
+        ss.finalNote(studentList);
+        ss.printStudent(studentList);
     }
-    
+
 }
